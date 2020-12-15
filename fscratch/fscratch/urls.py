@@ -28,9 +28,9 @@ urlpatterns = [
     url(r'^search/$', search_views.search, name='search'),
 
     url(r'^blog/', include(wagtail_urls)),
-	
-	
-	
+
+
+
     # For anything not caught by a more specific rule above, hand over to
     # Wagtail's page serving mechanism. This should be the last pattern in
     # the list:
@@ -39,8 +39,8 @@ urlpatterns = [
     # Alternatively, if you want Wagtail pages to be served from a subpath
     # of your site, rather than the site root:
     #    url(r'^pages/', include(wagtail_urls)),
-	
-#Friends for Sale Start	
+
+#Friends for Sale Start
     path('del_bprofile/<int:profId>', views.del_bprofile, name='del_bprofile'),
     path('up_bprofile/<int:profId>', views.up_bprofile, name='up_bprofile'),
     path('bprofile/', views.bsell_profile, name='bsell_profile'),
@@ -55,7 +55,7 @@ urlpatterns = [
     path('update/<int:artId>', views.update, name='update'),
     path('header/', views.header, name='header'),
     path('footer/', views.footer, name='footer'),
-#Articles End	
+#Articles End
 
 #Members Start
 
@@ -67,15 +67,14 @@ urlpatterns = [
     path('login1', views.login1, name='login1'),
     path('logout1', views.logout1, name='logout1'),
 
-#Members End	
+#Members End
 
 #Users Start
     path('register', views.register, name='register'),
     path('delete_user/<int:usrId>', views.delete_user, name='delete_user'),
-    path('update_user/<int:usrId>', views.update_user, name='update_user'),    
+    path('update_user/<int:usrId>', views.update_user, name='update_user'),
 	path('users_home', views.users_home, name='users_home'),
-#Users End	
-	
+#Users End
 
     path('withdraw', views.withdraw, name='withdraw'),
     path('buy', views.buy, name='buy'),
@@ -90,8 +89,8 @@ urlpatterns = [
 
 
 #Shop End
-	
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  
+
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 if settings.DEBUG:
