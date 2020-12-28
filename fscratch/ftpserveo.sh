@@ -1,1 +1,0 @@
-ssh -o ServerAliveInterval=10 -R floter1ftp.serveo.net:80:192.168.1.246:1084 serveo.net
